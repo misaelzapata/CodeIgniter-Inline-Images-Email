@@ -192,8 +192,8 @@ class MY_Email extends CI_Email
 			if ($this->_attach_disp[$i] == 'inline')
 			{
 
-				$f = get_file_info($filename, 'name');
-				$f['name'] = trim($f['name']);
+				$f = basename($filename);
+				$f['name'] = trim($f);
 				$cid = 'inl_'.$i;
 				$cid1 = 'cid:'.$cid;
 				$h .= "Content-ID: <".$cid.">".$this->newline;
@@ -232,3 +232,5 @@ class MY_Email extends CI_Email
 		return;
 	}
 }
+
+
