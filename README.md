@@ -17,3 +17,23 @@ $this->email->attach("image.png", "inline");
 
 If you have problems or have recommendations, please file an issue at
 https://github.com/misaelzapata/CodeIgniter-Inline-Images-Email/issues
+
+
+Usage - For Images
+------------------
+
+Upload the image to your server.
+
+In your controller that is sending email, add this line:
+
+			$this->email->attach("/home/yoursite/location-of-file.jpg", "inline");
+
+Then in the email view add this:
+
+<img src="location-of-file.jpg">
+
+And location-of-file.jpg will be changed to the content id for that resource.
+
+Other things will work as well such as ...src=", ...href=", url('')
+
+
