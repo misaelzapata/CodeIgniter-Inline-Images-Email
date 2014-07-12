@@ -30,7 +30,7 @@ In your controller that is sending email, add this line:
 
 Then in the email view add this:
 
-<img src="cid:location-of-file.png" border="0">
+< img src="cid:location-of-file.png" border="0" >
 
 And location-of-file.jpg will be changed to the content id for that resource.
 
