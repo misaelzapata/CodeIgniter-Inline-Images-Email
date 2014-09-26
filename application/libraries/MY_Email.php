@@ -193,15 +193,15 @@ class MY_Email extends CI_Email
 			{
 
 				$f = basename($filename);
-				$f['name'] = trim($f);
+				$ft = trim($f);
 				$cid = 'inl_'.$i;
 				$cid1 = 'cid:'.$cid;
 				$h .= "Content-ID: <".$cid.">".$this->newline;
-				$body = $this->matched_replace_between($body, 'src=3D"', '"', $f['name'], $cid1, 3);
-				$body = $this->matched_replace_between($body, 'href=3D"', '"', $f['name'], $cid1, 3);
-				$body = $this->matched_replace_between($body, 'src="', '"', $f['name'], $cid1, 3);
-				$body = $this->matched_replace_between($body, 'href="', '"', $f['name'], $cid1, 3);
-				$body = $this->matched_replace_between($body, 'url(\'', '\');', $f['name'], $cid1, 3);
+				$body = $this->matched_replace_between($body, 'src=3D"', '"', $ft, $cid1, 3);
+				$body = $this->matched_replace_between($body, 'href=3D"', '"', $ft, $cid1, 3);
+				$body = $this->matched_replace_between($body, 'src="', '"', $ft, $cid1, 3);
+				$body = $this->matched_replace_between($body, 'href="', '"', $ft, $cid1, 3);
+				$body = $this->matched_replace_between($body, 'url(\'', '\');', $ft, $cid1, 3);
 			}
 
 			$attachment[$z++] = $h;
